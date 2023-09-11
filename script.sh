@@ -44,4 +44,17 @@ echo ""
 bun run bench_loadfile.js
 echo ""
 
+echo "running node benchmark"
+for version in 20; do
+  nvm use $version
+  node bench.mjs
+  echo ""
+done
+
+
+echo "running bun benchmark"
+echo ""
+bun run bench.mjs
+echo ""
+
 
