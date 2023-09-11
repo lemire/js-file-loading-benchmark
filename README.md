@@ -5,7 +5,7 @@ Requirement: We assume that have macOS or Linux. Windows is not supported.
 
 Run the bash script `script.sh` (e.g., type `bash script.sh`). It will install `nvm` and `bun` in your user account, if needed. 
 
-The benchmark simply reads the current README.md file, as quickl as possible.
+The benchmark simply reads the current README.md file, as quickly as possible.
 
 
 ## Sample Results
