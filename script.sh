@@ -28,7 +28,7 @@ function cleanup {
 trap cleanup EXIT
 
 # Clear terminal output
-printf "\033c"
+# printf "\033c"
 
 echo ""
 bun run bench_loadfile.js
