@@ -17,7 +17,7 @@ fi
 for version in  20; do
   nvm install $version --silent
 done
-npm install --ignore-scripts --no-audit --no-fund --silent
+npm install --ignore-scripts --no-audit --no-fund 
 current_node_version=$(nvm current)
 
 function cleanup {
@@ -27,14 +27,21 @@ function cleanup {
 
 trap cleanup EXIT
 
+echo "please wait a few seconds"
+
 # Clear terminal output
 # printf "\033c"
-
-echo ""
-bun run bench_loadfile.js
-echo ""
+echo "running node benchmark"
 for version in 20; do
   nvm use $version
   node bench_loadfile.js
   echo ""
 done
+
+
+echo "running bun benchmark"
+echo ""
+bun run bench_loadfile.js
+echo ""
+
+
