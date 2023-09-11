@@ -47,14 +47,14 @@ echo ""
 echo "running node benchmark"
 for version in 20; do
   nvm use $version
-  node bench.mjs
+  node alternative/files.mjs
   echo ""
 done
 
 
 echo "running bun benchmark"
 echo ""
-bun run bench.mjs
+bun run alternative/files.mjs
 echo ""
 
 
