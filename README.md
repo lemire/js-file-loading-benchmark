@@ -7,6 +7,7 @@ Run the bash script `script.sh` (e.g., type `bash script.sh`). It will install `
 
 The benchmark simply reads the current README.md file, as quickly as possible.
 
+The README file may contain non-ASCII characters: é, ê, ô.
 
 ## Sample Results
 
