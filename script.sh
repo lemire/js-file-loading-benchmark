@@ -44,17 +44,19 @@ echo ""
 bun run bench_loadfile.js
 echo ""
 
-echo "running node benchmark"
-for version in 20; do
-  nvm use $version
-  node alternative/files.mjs
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+  echo "running node benchmark"
+  for version in 20; do
+    nvm use $version
+    node alternative/files.mjs
+    echo ""
+  done
+
+
+  echo "running bun benchmark"
   echo ""
-done
+  bun run alternative/files.mjs
+  echo ""
 
 
-echo "running bun benchmark"
-echo ""
-bun run alternative/files.mjs
-echo ""
-
-
+fi
